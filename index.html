@@ -1,34 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Header Responsive</title>
     <link rel="stylesheet" href="reset.css" />
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Kaisei+Decol:wght@400;500;700&family=Krona+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Kaisei+Decol:wght@400;500;700&family=Krona+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&display=swap");
     </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Kaisei+Decol:wght@400;500;700&family=Krona+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="header">
-      <h3 class="header__tilulo">MARSCOM</h3>
-      <ul class="header__tilulo__lista">
-        <li class="header__tilulo__lista__elemento active">Home</li>
-        <li class="header__tilulo__lista__elemento">Services</li>
-        <li class="header__tilulo__lista__elemento">About me</li>
-        <li class="header__tilulo__lista__elemento">Portfolio</li>
-        <li class="header__tilulo__lista__elemento">Contact me</li>
-      </ul>
-      <button class="header__tilulo__lista__boton">Hire Me</button>
+      <button class="menu-desplegable" id="menu-toggle">
+        <img src="/Imagenes/menu.png" alt="" />
+      </button>
+      <nav class="nav-links" id="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">About me</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Contact me</a>
+      </nav>
+      <h3 class="logo">MARSCOM</h3>
+      <button class="boton__header">Hire Me</button>
     </header>
 
-    <div class="mobile-menu" id="mobile-menu">
-      <a href="#" class="active">Home</a>
-      <a href="#">Services</a>
-      <a href="#">About me</a>
-      <a href="#">Portfolio</a>
-      <a href="#">Contact me</a>
-    </div>
+    <script>
+      const toggle = document.getElementById("menu-toggle");
+      const nav = document.getElementById("nav-links");
+
+      toggle.addEventListener("click", () => {
+        nav.classList.toggle("show");
+      });
+    </script>
   </body>
 </html>

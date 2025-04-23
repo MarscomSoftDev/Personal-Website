@@ -1,64 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
+  font-family: sans-serif;
   background-color: #1e1e1e;
-  font-family: "Lato", sans-serif;
 }
 
 .header {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 10%;
-  width: auto;
-  padding: 0;
-  margin: 3% 3% 0;
-}
 
-.header__tilulo {
-  display: flex;
-  font-size: 1rem;
-  justify-content: center;
-  align-items: center;
-  background-clip: text;
-  color: transparent;
-  background-image: url("https://i.gifer.com/CaH.gif");
-}
-
-.header__tilulo__lista {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  gap: 1rem;
-  font-size: 0.5rem;
-}
-
-.header__tilulo__lista__elemento {
+  padding: 30px 20px;
   color: white;
   position: relative;
-  cursor: pointer;
-  font-family: "Lato", sans-serif;
-  transition: color 0.3s ease;
 }
 
-.header__tilulo__lista__elemento::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background-color: #e63946; /* Línea azul */
-  left: 0;
-  bottom: -5px;
-  transition: width 0.3s ease;
-}
-
-.header__tilulo__lista__elemento:hover::after {
-  width: 100%;
-}
-
-.header__tilulo__lista__elemento.active {
-  font-size: clamp (0.5rem, 2vw + 1rem, 1.3rem);
-  font-weight: 900;
+.logo {
+  font-size: clamp(1.5rem, 2vw + 1rem, 3rem);
+  font-weight: bold;
+  font-family: "K2D", sans-serif;
   background: linear-gradient(to right, #fa6e00 0%, #e60026 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -66,22 +29,77 @@ body {
   color: transparent;
 }
 
-.header__tilulo__lista__boton {
-  width: 12%;
-  height: auto;
-  padding: 12px 24px;
-  font-size: clamp (0.5rem, 2vw, 1rem);
-  font-weight: bold;
+.menu-desplegable {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  font-family: "Lato", sans-serif;
+}
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background-color: #0b5ed7;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.nav-links.show {
+  display: flex;
+}
+
+.boton__header {
+  padding: 4px 10px;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+
   color: white;
   background: linear-gradient(to right, #fa6e00 0%, #e60026 100%);
   border: none;
-  border-radius: 15px;
+  border-radius: 5%;
   cursor: pointer;
+  min-width: 100px;
+  max-width: 280px;
+  width: auto;
+  height: auto;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-.header__tilulo__lista__boton:hover {
+.boton-gradiente:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
+/* @media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: none;
+    width: auto;
+    padding: 0;
+  }
+
+  .nav-links a {
+    margin-left: 20px;
+  }
+
+  .action-button {
+    display: inline-block;
+  }
+} */
