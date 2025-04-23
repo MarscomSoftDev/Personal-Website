@@ -1,0 +1,87 @@
+body {
+  background-color: #1e1e1e;
+  font-family: "Lato", sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 10%;
+  width: auto;
+  padding: 0;
+  margin: 3% 3% 0;
+}
+
+.header__tilulo {
+  display: flex;
+  font-size: 1rem;
+  justify-content: center;
+  align-items: center;
+  background-clip: text;
+  color: transparent;
+  background-image: url("https://i.gifer.com/CaH.gif");
+}
+
+.header__tilulo__lista {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+  font-size: 0.5rem;
+}
+
+.header__tilulo__lista__elemento {
+  color: white;
+  position: relative;
+  cursor: pointer;
+  font-family: "Lato", sans-serif;
+  transition: color 0.3s ease;
+}
+
+.header__tilulo__lista__elemento::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #e63946; /* Línea azul */
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease;
+}
+
+.header__tilulo__lista__elemento:hover::after {
+  width: 100%;
+}
+
+.header__tilulo__lista__elemento.active {
+  font-size: clamp (0.5rem, 2vw + 1rem, 1.3rem);
+  font-weight: 900;
+  background: linear-gradient(to right, #fa6e00 0%, #e60026 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.header__tilulo__lista__boton {
+  width: 12%;
+  height: auto;
+  padding: 12px 24px;
+  font-size: clamp (0.5rem, 2vw, 1rem);
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(to right, #fa6e00 0%, #e60026 100%);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.header__tilulo__lista__boton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
