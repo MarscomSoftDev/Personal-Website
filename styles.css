@@ -22,6 +22,7 @@ body {
   font-size: clamp(1.5rem, 2vw + 1rem, 3rem);
   font-weight: bold;
   font-family: "K2D", sans-serif;
+
   background: linear-gradient(to right, #fa6e00 0%, #e60026 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -41,21 +42,39 @@ body {
 .nav-links {
   display: none;
   flex-direction: column;
-  gap: 5px;
-  background-color: #0b5ed7;
+  gap: 4px;
   position: absolute;
-  top: 80px;
+  top: 80%;
   left: 0;
   width: 100%;
-  padding: 15px;
+  padding: 16px;
 }
 
 .nav-links a {
+  position: relative; /* para posicionar el pseudo-elemento */
   color: white;
   text-decoration: none;
-  font-size: 1.1rem;
+  padding: 5px 0;
+  display: block;
+  padding: 10px 16px;
+  font-size: 1rem;
 }
 
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px; /* grosor de la línea */
+  width: 0; /* inicialmente oculto */
+  background: linear-gradient(to right, #fa6e00, #e60026);
+  transition: width 0.3s ease;
+}
+
+/* al pasar el ratón, la línea se expande al 100% */
+.nav-links a:hover::after {
+  width: 100%;
+}
 .nav-links.show {
   display: flex;
 }
@@ -67,7 +86,7 @@ body {
   color: white;
   background: linear-gradient(to right, #fa6e00 0%, #e60026 100%);
   border: none;
-  border-radius: 5%;
+  border-radius: 8px;
   cursor: pointer;
   min-width: 100px;
   max-width: 280px;
@@ -77,29 +96,7 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-.boton-gradiente:hover {
+.boton__header:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
-/* @media (min-width: 768px) {
-  .menu-toggle {
-    display: none;
-  }
-
-  .nav-links {
-    display: flex !important;
-    position: static;
-    flex-direction: row;
-    background: none;
-    width: auto;
-    padding: 0;
-  }
-
-  .nav-links a {
-    margin-left: 20px;
-  }
-
-  .action-button {
-    display: inline-block;
-  }
-} */
