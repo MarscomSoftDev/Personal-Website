@@ -100,3 +100,53 @@ body {
   transform: scale(1.05);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
+
+/*css para la seccion antes de la foto*/
+
+.seccion__primaria {
+  display: flex;
+  flex-direction: column;
+}
+
+.div__hs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.seccion__div__hs h1,
+h3,
+h4 {
+  text-align: center;
+}
+
+.seccion__iconos__redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seccion__iconos__redes ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 15px;
+}
+
+.seccion__iconos__redes li {
+  margin: 0;
+}
+.seccion__iconos__redes img {
+  display: block;
+  /* width: 30%;
+  height: auto;
+  background-color: black; */
+  margin: 0;
+  padding: 0;
+}
+
+.imagen_iconos {
+  width: 20px;
+}
