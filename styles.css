@@ -121,6 +121,21 @@ h4 {
   text-align: center;
 }
 
+.seccion__div__hs h1 {
+  font-size: 40px;
+  color: #fa6e00;
+  margin-bottom: 20px;
+}
+
+.seccion__div__hs h4 {
+  color: #707070;
+}
+
+.seccion__div__hs h3 {
+  color: #d9d9d9;
+  margin-bottom: 20px;
+}
+
 .seccion__iconos__redes {
   display: flex;
   justify-content: center;
@@ -131,7 +146,7 @@ h4 {
   display: flex;
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin-bottom: 30px;
   gap: 15px;
 }
 
@@ -149,4 +164,8 @@ h4 {
 
 .imagen_iconos {
   width: 20px;
+}
+
+.boton__header .boton__hire__me {
+  background-color: aqua;
 }
